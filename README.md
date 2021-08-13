@@ -21,7 +21,7 @@ arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"], True) will 
 ```
 
 ## Input Constraints
-This function will return an error if given an invalid input in the following cases:
+This function will return an error if given the following invalid inputs:
 * There are more than five problems
 * An operator other than '+' or '-' is used
 * Operands are not positive integers
