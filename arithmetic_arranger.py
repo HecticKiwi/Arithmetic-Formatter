@@ -1,17 +1,12 @@
-import re
-
 def arithmetic_arranger(problems, show_answer=False):
     row1, row2, row3, row4= [], [], [], []
 
     for problem in problems:
-        num1, num2 = re.findall('\w+', problem)
+        num1, operator, num2 = problem.split(' ')
 
-        try:   
-            operator = re.findall('[+-]', problem)[0]
-        except:
+        if operator not in {'+', '-'}: 
             return "Error: Operator must be '+' or '-'."
-
-        if len(problems) > 5:
+        elif len(problems) > 5:
             return "Error: Too many problems."
         elif not (num1.isnumeric() and num2.isnumeric()):
             return "Error: Numbers must only contain digits."
